@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta property="og:title" content="The College App Queen">
+<meta property="og:description" content="Rank &amp; Write, activity list guides and college application strategy from Ashley, The College App Queen.">
+<meta property="og:image" content="https://thecollegeappqueen.com/ashley-office.jpg">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>The College App Queen</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Rank & Write, activity list guides and college application strategy from Ashley, The College App Queen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one airy column on white, pearl glass bubbles drifting behind frosted panels; products first, consulting last. */
+:root{
+  --bg:#FBFBFD;
+  --ink:#22142F;         /* body text, purple-tinted near-black */
+  --ink-soft:#5E5470;
+  --line:rgba(61,26,107,.12);
+  --deep:#3D1A6B;        /* brand deep purple: headlines, buttons */
+  --royal:#5B2A86;       /* brand royal purple: italic words, links */
+  --gold:#C9A227;        /* brand gold: rules, underlines, highlights */
+  --gold-ink:#94730F;    /* gold dark enough to read as small text */
+  --accent:var(--gold-ink);
+  --accent-ink:#ffffff;
+  --glass:rgba(255,255,255,.58);
+  --glass-edge:rgba(255,255,255,.9);
+  --b1:#E4D6F5; --b2:#D6C3EE; --b3:#F6E3A6; --b4:#EEE5FA;
+  --display:"Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --body:"Figtree", "Helvetica Neue", Arial, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+  --r:28px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%;display:block}
+
+/* bubbles */
+.sky{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.bubble{position:absolute;border-radius:50%;
+  background:
+    radial-gradient(circle at 32% 28%, rgba(255,255,255,.95) 0 7%, rgba(255,255,255,0) 18%),
+    radial-gradient(circle at 70% 78%, rgba(255,255,255,.55) 0 4%, rgba(255,255,255,0) 14%),
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,0) 52%, var(--c) 78%, rgba(255,255,255,.85) 100%);
+  box-shadow:inset 0 0 40px rgba(255,255,255,.7), 0 30px 80px -30px var(--c);
+  opacity:.85;animation:drift var(--t,26s) ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate3d(var(--x,30px),var(--y,-50px),0) scale(1.04)}}
+@media (prefers-reduced-motion:reduce){.bubble{animation:none}html{scroll-behavior:auto}}
+
+.wrap{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+section{padding-block:clamp(64px,10vw,120px)}
+
+.glass{background:var(--glass);border:1px solid var(--glass-edge);border-radius:var(--r);
+  -webkit-backdrop-filter:blur(22px) saturate(140%);backdrop-filter:blur(22px) saturate(140%);
+  box-shadow:0 1px 0 rgba(255,255,255,.9) inset, 0 24px 60px -32px rgba(60,50,90,.28)}
+
+/* type */
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font:600 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.eyebrow::before{content:"";width:28px;height:2px;border-radius:2px;background:var(--gold)}
+h1,h2,h3,.price,.stat b,.product .amt,.brand,.quote blockquote{font-optical-sizing:none;font-variation-settings:"opsz" 14}
+h1,h2,h3{color:var(--deep);font-family:var(--display);font-weight:600;letter-spacing:-.01em;text-wrap:balance;margin:0}
+h1{font-size:clamp(44px,7vw,88px);line-height:1.02}
+h2{font-size:clamp(34px,4.6vw,56px);line-height:1.08}
+h3{font-size:clamp(24px,2.4vw,30px);line-height:1.15}
+h1 em,h2 em{font-style:italic;color:var(--royal);background:linear-gradient(transparent 82%,color-mix(in srgb,var(--gold) 55%,transparent) 82%, color-mix(in srgb,var(--gold) 55%,transparent) 94%,transparent 94%);padding:0 .04em}
+p{margin:0}
+.lede{font-size:clamp(18px,1.6vw,20px);color:var(--ink-soft);max-width:34em}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font:600 15px/1 var(--body);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s ease, box-shadow .2s ease, background .2s ease}
+.btn-dark{background:var(--deep);color:#fff;box-shadow:0 14px 30px -14px rgba(61,26,107,.6)}
+.btn-dark:hover{transform:translateY(-2px);background:var(--royal)}
+.btn-glass{background:rgba(255,255,255,.6);border-color:var(--glass-edge);color:var(--ink);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.btn-glass:hover{background:#fff}
+.btn:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--royal);outline-offset:3px}
+
+/* nav */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;padding-top:14px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 12px 10px 24px;border-radius:999px}
+.brand{font-family:var(--display);font-size:20px;text-decoration:none;white-space:nowrap}
+.brand i{color:var(--accent)}
+.brand img{display:block;height:84px;width:auto}
+.nav{padding-top:8px;padding-bottom:8px;border-radius:32px}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:15px}
+.nav ul a{text-decoration:none;color:var(--ink-soft)}
+.nav ul a:hover{color:var(--ink)}
+.nav .btn{padding:11px 20px;font-size:14px}
+@media (max-width:860px){.nav ul{display:none}}
+@media (max-width:420px){.brand img{height:60px}.brand{font-size:17px}.nav .btn{padding:10px 14px}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,72px);align-items:center;padding-top:clamp(48px,8vw,96px)}
+.hero > *{min-width:0}
+.hero .lede{margin-top:24px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+@media (max-width:900px){.hero{grid-template-columns:1fr}}
+
+/* sample entry card */
+.entry{padding:28px;position:relative}
+.entry .tag{position:absolute;top:-13px;left:24px;font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:7px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--ink-soft)}
+.entry .act{font-weight:600;font-size:15px}
+.entry .field{font-size:15px;line-height:1.55;margin-top:12px}
+.entry .field b{font-weight:600}
+.entry .org{font-style:italic;color:var(--ink-soft)}
+.entry .role{font-weight:600}
+.meter{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-top:16px;border-top:1px solid var(--line);font:400 12px/1 var(--mono);color:var(--ink-soft)}
+.meter .bar{flex:1;height:4px;border-radius:4px;background:rgba(29,27,38,.08);margin:0 14px;overflow:hidden}
+.meter .bar span{display:block;height:100%;background:linear-gradient(90deg,var(--royal),var(--gold));border-radius:4px}
+.rank{display:flex;gap:8px;margin-bottom:18px}
+.rank span{font:500 12px/1 var(--mono);padding:8px 10px;border-radius:10px;background:rgba(255,255,255,.7);border:1px solid var(--line);color:var(--ink-soft)}
+.rank span.on{background:var(--deep);color:#fff;border-color:var(--deep);box-shadow:0 0 0 2px var(--gold)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:8px}
+.stat{padding:28px 24px;text-align:center}
+.stat + .stat{border-left:1px solid var(--line)}
+.stat b{display:block;color:var(--deep);font:600 clamp(34px,4vw,50px)/1 var(--display)}
+.stat span{display:block;margin-top:10px;font-size:14px;color:var(--ink-soft)}
+@media (max-width:640px){.stats{grid-template-columns:1fr}.stat + .stat{border-left:0;border-top:1px solid var(--line)}}
+
+/* rank & write feature */
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px);padding:clamp(28px,5vw,64px);align-items:start}
+.feature > *{min-width:0}
+.feature h2{margin-top:14px}
+.feature .lede{margin-top:20px}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.checks li{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start}
+.checks li::before{content:"";width:22px;height:22px;margin-top:3px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#fff 0 18%,transparent 32%),radial-gradient(circle,var(--b2),var(--gold));box-shadow:inset 0 0 0 1px rgba(255,255,255,.9)}
+.price-row{display:flex;flex-wrap:wrap;align-items:center;gap:18px 24px;margin-top:32px}
+.price{color:var(--deep);font:600 46px/1 var(--display)}
+.price small{font:400 14px/1 var(--body);color:var(--ink-soft);margin-left:6px}
+.addon{margin-top:28px;padding:20px 22px;border-radius:20px;background:rgba(255,255,255,.65);border:1px solid var(--line);display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between}
+.addon p{font-size:15px;color:var(--ink-soft);max-width:30em}
+.addon strong{color:var(--ink)}
+.addon a{font-weight:600;font-size:15px;white-space:nowrap;color:var(--royal)}
+.addon{border-left:3px solid var(--gold)}
+@media (max-width:900px){.feature{grid-template-columns:1fr}}
+
+/* shop */
+.section-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px;margin-bottom:40px}
+.section-head .lede{max-width:26em}
+.shop{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+.product{padding:28px;display:flex;flex-direction:column;gap:14px;transition:transform .25s ease}
+.product:hover{transform:translateY(-4px)}
+.product .kind{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.product p{font-size:15px;color:var(--ink-soft);flex:1}
+.product .foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:6px;padding-top:16px;border-top:1px solid var(--line)}
+.product .amt{color:var(--deep);font:600 28px/1 var(--display)}
+.product .btn{padding:11px 18px;font-size:14px}
+.product.limited .kind{color:var(--accent)}
+
+/* about */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,5vw,72px);align-items:center}
+.about > *{min-width:0}
+.portrait{position:relative;max-width:380px}
+.cafe{margin-top:36px;border-radius:var(--r);width:100%;max-width:340px;aspect-ratio:4/5;object-fit:cover;object-position:50% 45%;box-shadow:0 30px 60px -36px rgba(60,50,90,.45)}
+@media (max-width:900px){.cafe{display:none}}
+.portrait img{border-radius:220px 220px var(--r) var(--r);width:100%;aspect-ratio:360/520;object-fit:cover;object-position:50% 40%;box-shadow:0 40px 80px -40px rgba(60,50,90,.45)}
+.portrait .halo{position:absolute;width:42%;aspect-ratio:1;right:-8%;bottom:8%;--c:var(--b1)}
+.about .lede{margin-top:20px}
+.about p + p{margin-top:16px}
+.creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;padding:0;list-style:none}
+.creds li{font-size:14px;padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.7);border:1px solid var(--line)}
+@media (max-width:860px){.about{grid-template-columns:1fr}.portrait{margin:0 auto}}
+
+/* quotes */
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.quote{padding:clamp(28px,4vw,44px)}
+.quote blockquote{margin:0;font:500 clamp(21px,2vw,25px)/1.4 var(--display);font-style:italic}
+.quote blockquote{color:var(--deep)}
+.quote{border-top:3px solid var(--gold)}
+.quote cite{display:block;margin-top:20px;font:500 14px/1 var(--body);font-style:normal;color:var(--ink-soft)}
+@media (max-width:760px){.quotes{grid-template-columns:1fr}}
+
+/* inquiry */
+.inquire{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,5vw,64px);padding:clamp(28px,5vw,64px)}
+.inquire > *{min-width:0}
+.inquire .lede{margin-top:20px}
+.steps{list-style:none;margin:32px 0 0;padding:0;display:grid;gap:18px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:36px 1fr;gap:14px;font-size:15px;color:var(--ink-soft)}
+.steps li::before{counter-increment:s;content:counter(s);width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font:500 13px/1 var(--mono);color:var(--deep);background:#fff;border:1px solid var(--gold)}
+.steps strong{color:var(--ink);font-weight:600}
+form{display:grid;gap:18px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:560px){.row{grid-template-columns:1fr}}
+label,.legend{display:block;font-size:13px;font-weight:600;margin-bottom:8px}
+input[type=text],input[type=email],select,textarea{width:100%;font:400 16px/1.4 var(--body);color:var(--ink);padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.85)}
+textarea{min-height:110px;resize:vertical}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips label{margin:0;font-weight:500;font-size:14px;padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.75);cursor:pointer;transition:background .15s, color .15s}
+.chips input:checked + label{background:var(--deep);color:#fff;border-color:var(--deep)}
+.chips input:focus-visible + label{outline:2px solid var(--royal);outline-offset:2px}
+.form-note{font-size:13px;color:var(--ink-soft)}
+.err{font-size:13px;color:#A3343F}
+.thanks{text-align:center;padding:40px 10px}
+.thanks h3{margin-bottom:12px}
+@media (max-width:900px){.inquire{grid-template-columns:1fr}}
+
+footer{padding-block:48px 64px;font-size:14px;color:var(--ink-soft)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center;border-top:1px solid var(--line);padding-top:28px}
+.foot .brand{font-size:18px;color:var(--ink)}
+.foot nav{display:flex;flex-wrap:wrap;gap:22px}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="sky" aria-hidden="true">
+  <div class="bubble" style="--c:var(--b2);width:420px;height:420px;top:-120px;right:-80px;--t:30s;--x:-40px;--y:60px"></div>
+  <div class="bubble" style="--c:var(--b1);width:180px;height:180px;top:38%;left:-50px;--t:24s;--x:40px;--y:-40px"></div>
+  <div class="bubble" style="--c:var(--b3);width:260px;height:260px;bottom:-60px;right:18%;--t:34s;--x:-30px;--y:-60px"></div>
+  <div class="bubble" style="--c:var(--b4);width:90px;height:90px;top:22%;left:44%;--t:20s;--x:20px;--y:40px"></div>
+  <div class="bubble" style="--c:var(--b1);width:56px;height:56px;bottom:18%;left:12%;--t:18s;--x:30px;--y:-30px"></div>
+</div>
+
+<div class="wrap">
+  <header>
+    <nav class="nav glass" aria-label="Main">
+      <a class="brand" href="#top" aria-label="College App Queen home"><img src="logo.png" alt="College App Queen" width="480" height="238"></a>
+      <ul>
+        <li><a href="#rank-and-write">Rank &amp; Write</a></li>
+        <li><a href="#shop">Guides</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <a class="btn btn-dark" href="#work-with-me">Work with me</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">College application strategy</p>
+        <h1 style="margin-top:18px">A strategist for <em>every</em> kind of kid.</h1>
+        <p class="lede">I'm Ashley. I've spent 20 years helping students show admissions officers who they actually are, and my students have earned more than $5 million in scholarships along the way.</p>
+        <div class="ctas">
+          <a class="btn btn-dark" href="#rank-and-write">Get Rank &amp; Write</a>
+          <a class="btn btn-glass" href="#shop">Shop the guides</a>
+        </div>
+      </div>
+
+      <div class="entry glass" aria-label="Sample Common App activity entry">
+        <span class="tag">Sample entry</span>
+        <div class="rank" aria-hidden="true"><span class="on">#1</span><span>#2</span><span>#3</span><span>#4</span><span>…</span><span>#10</span></div>
+        <div class="act">Activity 1</div>
+        <div class="field">Activity Type (drop-down menu): <b>Community Service (Volunteer)</b></div>
+        <div class="field" id="sample-desc">Founded a free tutoring program for 40 ESL students at two middle schools; recruited and trained 12 volunteer tutors; raised $3,200 for books</div>
+        <div class="field org">Bridge Tutoring Collective | Lincoln Middle School and Westview Middle School</div>
+        <div class="field role">Founder and Program Director | 12 Volunteer Tutors</div>
+        <div class="meter"><span>Description</span><span class="bar"><span id="meter-fill" style="width:94%"></span></span><span id="meter-count">141/150</span></div>
+      </div>
+    </section>
+
+    <div class="stats glass" role="list">
+      <div class="stat" role="listitem"><b>20</b><span>years in college admissions</span></div>
+      <div class="stat" role="listitem"><b>$5M+</b><span>in scholarships earned by my students</span></div>
+      <div class="stat" role="listitem"><b>10,000+</b><span>activity lists written</span></div>
+    </div>
+
+    <section id="rank-and-write">
+      <div class="feature glass">
+        <div>
+          <p class="eyebrow">Rank &amp; Write, my signature service</p>
+          <h2 style="margin-top:14px">Your activity list, <em>ranked</em> and written to stand out.</h2>
+          <p class="lede">You send me what your student has done. I put it in the order an admissions officer should read it and write every entry so it's ready to paste straight into the Common App.</p>
+          <div class="price-row">
+            <div class="price">$167</div>
+            <a class="btn btn-dark" href="https://collegeappqueen.samcart.com/products/rank-my-activities">Get ranked</a>
+          </div>
+        </div>
+        <div>
+          <ul class="checks">
+            <li><span><strong>Strategically ranked.</strong> Your strongest work goes where it gets read first.</span></li>
+            <li><span><strong>Written for the Common App.</strong> Descriptions, organizations and roles that fit every character limit.</span></li>
+            <li><span><strong>Start from wherever you are.</strong> Notes, a resume or nothing at all; I'll ask questions and draft with you.</span></li>
+            <li><span><strong>Sorted the right way.</strong> Activities, honors and additional info each go in the section where they belong.</span></li>
+            <li><span><strong>Built around your major.</strong> Undecided, business, engineering, pre-med or anything in between.</span></li>
+          </ul>
+          <div class="addon">
+            <p><strong>Add your Honors &amp; Awards section.</strong> Five honors, each with the right level of recognition and grade levels.</p>
+            <a href="https://collegeappqueen.samcart.com/products/honors-awards-optimization">Add it for $47 →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" style="padding-top:0">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Guides &amp; digital products</p>
+          <h2 style="margin-top:14px">Do it yourself, <em>with me</em>.</h2>
+        </div>
+        <p class="lede">Instant downloads you can work through on your own time, built from the same process I use with my private students.</p>
+      </div>
+      <div class="shop">
+        <article class="product glass">
+          <span class="kind">E-guide</span>
+          <h3>Activity List in One Weekend</h3>
+          <p>A step-by-step guide to building your whole activity list, from brainstorming to final descriptions, in a single weekend.</p>
+          <div class="foot"><span class="amt">$37</span><a class="btn btn-dark" href="https://collegeappqueen.samcart.com/products/the-magic-words-activity-list-e-guide">Buy now</a></div>
+        </article>
+        <article class="product glass">
+          <span class="kind">Video walkthrough</span>
+          <h3>The Common App Walkthrough</h3>
+          <p>Complete it with me. Fourteen short videos take you through the Common App section by section, so nothing gets missed or left blank.</p>
+          <div class="foot"><span class="amt">$37</span><a class="btn btn-dark" href="https://collegeappqueen.samcart.com/products/the-common-app-walkthrough-complete-it-with-me">Buy now</a></div>
+        </article>
+        <article class="product glass">
+          <span class="kind">Template</span>
+          <h3>Common App + UC Activity List Template</h3>
+          <p>The exact layout I use, with every field and character limit built in for both the Common App and the UC application.</p>
+          <div class="foot"><span class="amt">$27</span><a class="btn btn-dark" href="https://collegeappqueen.samcart.com/products/common-app-uc-activity-list-template">Buy now</a></div>
+        </article>
+        <article class="product glass">
+          <span class="kind">Workbook</span>
+          <h3>Finish Your Honors &amp; Awards in One Hour</h3>
+          <p>Pick your five strongest honors, find the right level of recognition for each, and write titles that tell a reader what you earned.</p>
+          <div class="foot"><span class="amt">$17</span><a class="btn btn-dark" href="https://collegeappqueen.samcart.com/products/honors-awards-in-one-hour">Buy now</a></div>
+        </article>
+        <article class="product glass limited">
+          <span class="kind">Limited spots</span>
+          <h3>College Essay Review &amp; Editing</h3>
+          <p>Two rounds of edits on your Common App personal statement, with rush turnaround and supplement add-ons at checkout.</p>
+          <div class="foot"><span class="amt">$245</span><a class="btn btn-dark" href="https://collegeappqueen.samcart.com/products/college-essay-review-editing">Grab a spot</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about" style="padding-top:0">
+      <div class="portrait">
+        <img src="ashley-office.jpg" alt="Ashley in her office in a yellow armchair, laptop open, reviewing a student's pages" width="360" height="586">
+        <div class="bubble halo" aria-hidden="true"></div>
+      </div>
+      <div>
+        <p class="eyebrow">Meet Ashley</p>
+        <h2 style="margin-top:14px">Hi, I'm <em>Ashley</em>.</h2>
+        <p class="lede">Whether your student is aiming for Princeton, Pomona or the program down the road, the work is the same: figure out who they actually are, then build the application that says it best.</p>
+        <p style="margin-top:16px;color:var(--ink-soft);max-width:34em">I've been doing this for 20 years, and most families find me on TikTok, where I share what admissions officers actually notice. My SAT prep program feeds right into my advising, so I see students from test scores all the way to submit.</p>
+        <ul class="creds">
+          <li>Activity list strategist</li>
+          <li>Common App expert</li>
+          <li>Personal statement coach</li>
+          <li>Award-winning book editor</li>
+          <li>TikTok educator</li>
+        </ul>
+      </div>
+    </section>
+
+    <section style="padding-top:0" aria-label="What families say">
+      <div class="quotes">
+        <figure class="quote glass" style="margin:0">
+          <blockquote>"Tell me how someone can be so dedicated and good at their job, be one of the nicest people in the world, and hands down, one of the best strategists in the game?! That's our queen in a nutshell."</blockquote>
+          <cite>The Brooks Family, Indiana</cite>
+        </figure>
+        <figure class="quote glass" style="margin:0">
+          <blockquote>"If you want an activity list that quite literally gets your child into college, look no further than Ashley and her remarkable team."</blockquote>
+          <cite>Karen, Philadelphia, PA</cite>
+        </figure>
+      </div>
+    </section>
+
+    <section id="work-with-me" style="padding-top:0">
+      <div class="inquire glass">
+        <div>
+          <p class="eyebrow">Private consulting</p>
+          <h2 style="margin-top:14px">Want me in your corner for <em>everything</em>?</h2>
+          <p class="lede">I take a small number of families each cycle for strategy, school lists, essays and the full application. Tell me about your student and I'll reach out personally.</p>
+          <ol class="steps">
+            <li><span><strong>Tell me about your student.</strong> It takes about two minutes.</span></li>
+            <li><span><strong>I'll be in your inbox within two business days</strong> to set up a call.</span></li>
+            <li><span><strong>We figure out exactly what your student needs</strong> and build the plan together.</span></li>
+          </ol>
+          <img class="cafe" src="ashley-cafe.jpg" alt="Ashley answering messages on her phone at an outdoor cafe table" width="360" height="568" loading="lazy">
+        </div>
+
+        <div id="form-area">
+          <form id="inquiry" novalidate>
+            <div class="row">
+              <div><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+              <div><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+            </div>
+            <div class="row">
+              <div><label for="f-student">Student's name</label><input id="f-student" name="student" type="text"></div>
+              <div><label for="f-grade">Student's grade</label>
+                <select id="f-grade" name="grade">
+                  <option value="">Choose one</option>
+                  <option>9th grade</option><option>10th grade</option><option>11th grade</option><option>12th grade</option><option>Gap year or transfer</option>
+                </select>
+              </div>
+            </div>
+            <fieldset>
+              <span class="legend">What are you looking for help with?</span>
+              <div class="chips">
+                <input type="checkbox" id="h1" name="help" value="Full application strategy"><label for="h1">Full application strategy</label>
+                <input type="checkbox" id="h2" name="help" value="College list"><label for="h2">College list</label>
+                <input type="checkbox" id="h3" name="help" value="Essays (personal statement and supplements)"><label for="h3">Essays</label>
+                <input type="checkbox" id="h4" name="help" value="Live activity list session"><label for="h4">Live activity list session</label>
+                <input type="checkbox" id="h5" name="help" value="Not sure yet"><label for="h5">Not sure yet</label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <span class="legend">What's your budget for private consulting?</span>
+              <div class="chips">
+                <input type="radio" id="b1" name="budget" value="Under $1,000" required><label for="b1">Under $1,000</label>
+                <input type="radio" id="b2" name="budget" value="$1,000 to $2,500"><label for="b2">$1,000 to $2,500</label>
+                <input type="radio" id="b3" name="budget" value="$2,500 to $5,000"><label for="b3">$2,500 to $5,000</label>
+                <input type="radio" id="b4" name="budget" value="$5,000+"><label for="b4">$5,000+</label>
+              </div>
+            </fieldset>
+            <div><label for="f-notes">Anything else I should know?</label><textarea id="f-notes" name="notes" placeholder="Top schools, deadlines, where your student is stuck..."></textarea></div>
+            <p class="err" id="form-err" hidden>Please add your name, a valid email and a budget so I can get back to you.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
+              <span class="form-note">I read every one of these myself.</span>
+              <button class="btn btn-dark" type="submit">Send to Ashley</button>
+            </div>
+          </form>
+          <div class="thanks" id="thanks" hidden>
+            <h3>Thank you, I've got it!</h3>
+            <p class="lede" style="margin:0 auto">I'll be in your inbox within two business days. In the meantime, the guides above are a great place to start.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <a class="brand" href="#top" aria-label="College App Queen home"><img src="logo.png" alt="College App Queen" width="480" height="238" style="height:120px"></a>
+      <nav aria-label="Footer">
+        <a href="#rank-and-write">Rank &amp; Write</a>
+        <a href="#shop">Guides</a>
+        <a href="#work-with-me">Work with me</a>
+        <span>thecollegeappqueen@gmail.com</span>
+      </nav>
+      <span>© 2026 The College App Queen</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var d=document.getElementById('sample-desc'),c=document.getElementById('meter-count'),f=document.getElementById('meter-fill');
+  if(d&&c&&f){var n=d.textContent.trim().length;c.textContent=n+'/150';f.style.width=Math.min(100,n/150*100)+'%';}
+  var form=document.getElementById('inquiry'),err=document.getElementById('form-err'),thanks=document.getElementById('thanks');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=document.getElementById('f-name').value.trim(),email=document.getElementById('f-email').value.trim(),budget=form.querySelector('input[name=budget]:checked');
+    var ok=name&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)&&budget;
+    err.hidden=!!ok;
+    if(!ok)return;
+    var parts=name.split(/\s+/), fd=new FormData();
+    fd.append('formID','262903015491049');
+    fd.append('q2_q2_fullname0[first]',parts.shift());
+    fd.append('q2_q2_fullname0[last]',parts.join(' '));
+    fd.append('q3_q3_email1',email);
+    fd.append('q5_q5_textbox3',document.getElementById('f-student').value.trim());
+    fd.append('q6_q6_dropdown4',document.getElementById('f-grade').value);
+    form.querySelectorAll('input[name=help]:checked').forEach(function(c){fd.append('q7_q7_checkbox5[]',c.value);});
+    fd.append('q8_q8_radio6',budget.value);
+    fd.append('q9_q9_textarea7',document.getElementById('f-notes').value.trim());
+    var btn=form.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='Sending...';
+    fetch('https://submit.jotform.com/submit/262903015491049',{method:'POST',body:fd,mode:'no-cors'})
+      .then(function(){form.hidden=true;thanks.hidden=false;})
+      .catch(function(){btn.disabled=false;btn.textContent='Send to Ashley';err.textContent='That didn\u2019t go through. Please email me at thecollegeappqueen@gmail.com and I\u2019ll get right back to you.';err.hidden=false;});
+  });
+})();
+</script>
+</body>
+</html>
